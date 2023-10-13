@@ -1,16 +1,19 @@
-﻿string imie = "Ewa";
-char plec = 'k';
-int wiek = 33;
+﻿int number = 4566;
+string numberInString = number.ToString(); //przekształcenie w zmienną typu string
+char[] letters = numberInString.ToArray(); //każda cyfra ze zmiennej numberInString wrzucona do osobnej, kolejnej komorki tablicy letters
+var licznik = 0;
 
-if (plec == 'k' && wiek < 30)
+
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-if (imie == "Ewa" && wiek == 33)
-{
-    Console.WriteLine("Ewa, lat 33");
-}
-if (plec == 'm' && wiek < 18)
-{
-    Console.WriteLine("Niepełnoletni Mężczyzna");
+    string iInString = i.ToString();
+    foreach (char cyfra in letters)
+    {
+        if (cyfra.ToString() == iInString)
+        {
+            licznik++;
+        }
+    }
+    Console.WriteLine(iInString + "=> " + licznik);
+    licznik = 0;
 }
