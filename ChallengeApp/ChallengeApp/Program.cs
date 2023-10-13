@@ -26,7 +26,7 @@ if (plec == 'k')
     }
     if (wiek == 33)
     {
-        Console.WriteLine("2. Ewa, lat  33");
+        Console.WriteLine("2. Ewa, lat 33");
     }
 }
 else if (wiek < 18)
