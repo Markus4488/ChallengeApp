@@ -6,14 +6,13 @@ var licznik = 0;
 
 for (int i = 0; i < 10; i++)
 {
-    string iInString = i.ToString();
     foreach (char cyfra in letters)
     {
-        if (cyfra.ToString() == iInString)
+        if (cyfra.ToString() == i.ToString())
         {
             licznik++;
         }
     }
-    Console.WriteLine(iInString + "=> " + licznik);
+    Console.WriteLine(i + "=> " + licznik);
     licznik = 0;
 }
