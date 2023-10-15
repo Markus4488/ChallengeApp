@@ -1,18 +1,15 @@
-﻿int number = 4566;
-string numberInString = number.ToString(); //przekształcenie w zmienną typu string
-char[] letters = numberInString.ToArray(); //każda cyfra ze zmiennej numberInString wrzucona do osobnej, kolejnej komorki tablicy letters
-var counter = 0;
+﻿using ChallengeApp;
+
+Employee employee1 = new Employee("Andrzej", "Andrzejewski", 34);
+Employee employee2 = new Employee("Paweł", "Pawłowski", 24);
+Employee employee3 = new Employee("Krzysztof", "Krzysztofiński", 45);
 
 
-for (int i = 0; i < 10; i++)
-{
-    foreach (char digit in letters)
-    {
-        if (digit.ToString() == i.ToString())
-        {
-            counter++;
-        }
-    }
-    Console.WriteLine(i + "=> " + counter);
-    counter = 0;
-}
+employee1.AddScore(5);
+employee1.AddScore(2);
+var result = employee1.Result;
+Console.WriteLine(result);
+//var aaa = Math.Max(result);
+
+
+
