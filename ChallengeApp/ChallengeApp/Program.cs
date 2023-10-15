@@ -41,6 +41,3 @@ foreach (var employee in employees)
 
 Console.WriteLine($"Pracownik: {employeeWithMax.Name} {employeeWithMax.Surname} lat: {employeeWithMax.Age} osiągnął największy wynik: {employeeWithMax.Result}");
   
-
-
-
