@@ -1,5 +1,4 @@
-﻿namespace ChallengeApp
-{
+﻿namespace ChallengeApp;
 
     class Employee
     {
@@ -30,4 +29,3 @@
         }
 
     }
-}
