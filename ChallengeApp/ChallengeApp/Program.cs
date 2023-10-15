@@ -1,5 +1,6 @@
 ﻿using ChallengeApp;
 
+
 Employee employee1 = new Employee("Andrzej", "Andrzejewski", 34);
 Employee employee2 = new Employee("Paweł", "Pawłowski", 24);
 Employee employee3 = new Employee("Krzysztof", "Krzysztofiński", 45);
@@ -40,4 +41,3 @@ foreach (var employee in employees)
 }
 
 Console.WriteLine($"Pracownik: {employeeWithMax.Name} {employeeWithMax.Surname} lat: {employeeWithMax.Age} osiągnął największy wynik: {employeeWithMax.Result}");
-  
