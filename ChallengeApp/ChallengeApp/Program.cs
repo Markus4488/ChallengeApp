@@ -1,6 +1,5 @@
 ﻿using ChallengeApp;
 
-
 Employee employee1 = new Employee("Andrzej", "Andrzejewski", 34);
 Employee employee2 = new Employee("Paweł", "Pawłowski", 24);
 Employee employee3 = new Employee("Krzysztof", "Krzysztofiński", 45);

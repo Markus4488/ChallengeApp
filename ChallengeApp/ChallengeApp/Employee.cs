@@ -1,6 +1,6 @@
 ﻿namespace ChallengeApp;
 
-    class Employee
+    public class Employee
     {
         private List<int> score = new List<int>();
         public Employee(string name, string surname, int age) //konstruktor
@@ -26,6 +26,6 @@
         public void AddScore(int number) //metoda
         {
             this.score.Add(number);
-        }
+    }
 
     }
