@@ -9,14 +9,17 @@ namespace ChallengeApp.Test
         public void SumTestsofEmployees()
         {
             //arrange
-            var employee = new Employee("Zdzis³aw", "Walohalo", 45);
-            employee.AddScore(7);
-            employee.AddScore(-2);
+            var employee = new Employee("Zdzis³aw", "Walohalo");
+            employee.Addgrade(7);
+            employee.Addgrade(2);
+            employee.Addgrade(3);
             //act
-            var result = employee.Result;
+            var result = employee.GetStatistics();
 
             //assert
-            Assert.AreEqual(5, result);
+            Assert.AreEqual(7, result.Max);
+            Assert.AreEqual(2, result.Min);
+            Assert.AreEqual(4, result.Average);
 
 
 
