@@ -19,7 +19,7 @@ public class Employee
     }
 
     public Statistics GetStatistics ()
-    { 
+    {  
         var statistics = new Statistics();
         statistics.Average = 0;
         statistics.Min = float.MaxValue;
