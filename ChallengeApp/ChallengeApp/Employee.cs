@@ -55,7 +55,6 @@ public class Employee
             statistics.Average += grade;
         }
         statistics.Average /= this.grades.Count;
-
         return statistics;
     }
 
@@ -73,7 +72,6 @@ public class Employee
             statistics.Average += this.grades[i];
         }
         statistics.Average /= this.grades.Count;
-
         return statistics;
     }
 
@@ -110,7 +108,6 @@ public class Employee
             statistics.Average += this.grades[i];
             i++;
         }
-        
         statistics.Average /= this.grades.Count;
         return statistics;
     }
