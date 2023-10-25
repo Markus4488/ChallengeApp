@@ -2,7 +2,6 @@
 
 public class Employee
 {
-
     private List<float> grades = new List<float>();
     public Employee(string name, string surname) //konstruktor
     {
@@ -18,30 +17,78 @@ public class Employee
         if (grade >= 0 && grade <= 100)
         {
             this.grades.Add(grade);
+            Console.WriteLine($"Just added: {grade}");
         }
         else
         {
-            Console.WriteLine("invalid grade value");
+            Console.WriteLine("Invalid grade value");
         }
     }
     public void Addgrade(string grade) //metoda
     {
-        if (float.TryParse(grade, out float result))
+        Console.WriteLine("---string readed---");
+        switch (grade)
         {
-            this.Addgrade(result);
-        }
-        else
-        {
-            Console.WriteLine("String is not float");
+            case "A":
+                this.Addgrade(100);
+                break;
+            case "B":
+                this.Addgrade(80);
+                break;
+            case "C":
+                this.Addgrade(60);
+                break;
+            case "D":
+                this.Addgrade(40);
+                break;
+            case "E":
+                this.Addgrade(20);
+                break;
+            default:
+                if (float.TryParse(grade, out float result))
+                {
+                    this.Addgrade(result);
+                }
+                else
+                {
+                    Console.WriteLine("String is not float");
+                }
+                break;
         }
     }
+
     public void Addgrade(int grade) //metoda
     {
         float value = (float)grade;
         this.Addgrade(value);
     }
+    public void Addgrade(char grade)
+    {
+        Console.WriteLine("--char readed--");
+        switch (grade)
+        {
+            case 'A':
+                this.Addgrade(100);
+                break;
+            case 'B':
+                this.Addgrade(80);
+                break;
+            case 'C':
+                this.Addgrade(60);
+                break;
+            case 'D':
+                this.Addgrade(40);
+                break;
+            case 'E':
+                this.Addgrade(20);
+                break;
+            default:
+                this.Addgrade(0);
+                break;
+        }
+    }
 
-    public Statistics GetStatistics_ForEach()
+    public Statistics GetStatistics()
     {
         var statistics = new Statistics();
         statistics.Average = 0;
@@ -57,58 +104,8 @@ public class Employee
         statistics.Average /= this.grades.Count;
         return statistics;
     }
-
-    public Statistics GetStatistics_For()
+    public int GetCount()
     {
-        var statistics = new Statistics();
-        statistics.Average = 0;
-        statistics.Min = float.MaxValue;
-        statistics.Max = float.MinValue;
-
-        for (int i = 0; i < this.grades.Count; i++)
-        {
-            statistics.Max = Math.Max(statistics.Max, this.grades[i]);
-            statistics.Min = Math.Min(statistics.Min, this.grades[i]);
-            statistics.Average += this.grades[i];
-        }
-        statistics.Average /= this.grades.Count;
-        return statistics;
-    }
-
-    public Statistics GetStatistics_DoWhile()
-    {
-        var statistics = new Statistics();
-        statistics.Average = 0;
-        statistics.Min = float.MaxValue;
-        statistics.Max = float.MinValue;
-        var i = 0;
-        do
-        {
-            statistics.Max = Math.Max(statistics.Max, this.grades[i]);
-            statistics.Min = Math.Min(statistics.Min, this.grades[i]);
-            statistics.Average += this.grades[i];
-            i++;
-        }
-        while (i < this.grades.Count);
-        statistics.Average /= this.grades.Count;
-        return statistics;
-    }
-
-    public Statistics GetStatistics_While()
-    {
-        var statistics = new Statistics();
-        statistics.Average = 0;
-        statistics.Min = float.MaxValue;
-        statistics.Max = float.MinValue;
-        var i = 0;
-        while (i < this.grades.Count)
-        {
-            statistics.Max = Math.Max(statistics.Max, this.grades[i]);
-            statistics.Min = Math.Min(statistics.Min, this.grades[i]);
-            statistics.Average += this.grades[i];
-            i++;
-        }
-        statistics.Average /= this.grades.Count;
-        return statistics;
+        return this.grades.Count;
     }
 }
