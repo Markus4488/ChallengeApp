@@ -27,36 +27,23 @@ public class Employee
 
     public void Addgrade(string grade) //metoda
     {
-        Console.WriteLine("---string readed---");
-        switch (grade)
+
+        if (float.TryParse(grade, out float result))
         {
-            case "A":
-                this.Addgrade(100);
-                break;
-            case "B":
-                this.Addgrade(80);
-                break;
-            case "C":
-                this.Addgrade(60);
-                break;
-            case "D":
-                this.Addgrade(40);
-                break;
-            case "E":
-                this.Addgrade(20);
-                break;
-            default:
-                if (float.TryParse(grade, out float result))
-                {
-                    this.Addgrade(result);
-                }
-                else
-                {
-                    Console.WriteLine("String is not float");
-                }
-                break;
+            this.Addgrade(result);
+            Console.WriteLine("---string readed---");
         }
+        else if (char.TryParse(grade, out char charGrade))
+        {
+            this.Addgrade(charGrade);
+        }
+        else
+        {
+            Console.WriteLine("String is not float");
+        }
+
     }
+
 
     public void Addgrade(int grade) //metoda
     {
@@ -84,8 +71,11 @@ public class Employee
             case 'E':
                 this.Addgrade(20);
                 break;
-            default:
+            case 'F':
                 this.Addgrade(0);
+                break;
+            default:
+                Console.WriteLine("Wrong letter");
                 break;
         }
     }
