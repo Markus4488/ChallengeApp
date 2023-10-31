@@ -2,7 +2,6 @@
 
 var employee = new Employee("Andrzej", "Andrzejewski");
 
-
 Console.WriteLine("       Welcome to TEST program");
 Console.WriteLine("=======================================");
 Console.WriteLine();
