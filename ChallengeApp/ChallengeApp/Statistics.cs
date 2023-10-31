@@ -1,6 +1,7 @@
 ﻿
 namespace ChallengeApp
 {
+    
     public class Statistics
     {
         public float Min { get; set; }

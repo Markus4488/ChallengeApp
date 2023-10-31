@@ -24,6 +24,7 @@ public class Employee
             Console.WriteLine("Invalid grade value");
         }
     }
+
     public void Addgrade(string grade) //metoda
     {
         Console.WriteLine("---string readed---");
@@ -62,6 +63,7 @@ public class Employee
         float value = (float)grade;
         this.Addgrade(value);
     }
+
     public void Addgrade(char grade)
     {
         Console.WriteLine("--char readed--");
@@ -104,6 +106,7 @@ public class Employee
         statistics.Average /= this.grades.Count;
         return statistics;
     }
+
     public int GetCount()
     {
         return this.grades.Count;

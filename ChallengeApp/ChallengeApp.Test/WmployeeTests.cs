@@ -21,8 +21,6 @@ namespace ChallengeApp.Test
             Assert.AreEqual(2, result.Min);
             Assert.AreEqual(4, result.Average);
 
-
-
         }
         [Test]
         public void ABCD_test_Employees()
