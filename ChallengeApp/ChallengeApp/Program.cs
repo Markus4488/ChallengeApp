@@ -17,7 +17,6 @@ do
         break;
     }
     employee.Addgrade(input);
-    
 }
 while (true);
 
